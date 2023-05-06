@@ -11,14 +11,10 @@ class User{
         console.log("currentnumberofusers =", User.count)
     }
 }
-
 class Member extends User {
-  constructor(username, email, password ) {
-      
+  constructor(username, email, password ) { 
     super(username, email, password );     // complete the super function only. Do not make any other changes
-    
     this.membershipactivetilldate = new Date(2023, 2, 3)//assume user has joined ur platform on 3rd March
-    
     this.package = ' ';
   }
   
@@ -35,9 +31,7 @@ class Member extends User {
     else if(this.package === 'YEARLYPACKAGE') {
         this.membershipactivetilldate.setFullYear(this.membershipactivetilldate.getFullYear() + 1);
     }
- 
   }
-
   subscriptionActiveTill() {
     console.log(
       this.username +
